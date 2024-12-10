@@ -97,68 +97,102 @@
         <!-- Introduction Section -->
         <section>
             <h2>Introduction</h2>
-            <p>The dataset is two-folded, with the first named <b>recipes</b>, a dataset with 83782 rows and 12 columns. </p>
+            <p>The dataset is two-folded, with the first named <b>RAW_recipes.csv</b>, a dataset with 83782 rows and 12 columns, and the second named <b>RAW_interactions.csv</b>, a dataset with 731927 rows and 5 columns. The detailed breakdown of each column is specified as below:</p>
         </section>
         
-        <h3>Recipe Data Description</h3>
-    <table>
-        <thead>
-            <tr>
-                <th>Column</th>
-                <th>Description</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>'name'</td>
-                <td>Recipe name</td>
-            </tr>
-            <tr>
-                <td>'id'</td>
-                <td>Recipe ID</td>
-            </tr>
-            <tr>
-                <td>'minutes'</td>
-                <td>Minutes to prepare recipe</td>
-            </tr>
-            <tr>
-                <td>'contributor_id'</td>
-                <td>User ID who submitted this recipe</td>
-            </tr>
-            <tr>
-                <td>'submitted'</td>
-                <td>Date recipe was submitted</td>
-            </tr>
-            <tr>
-                <td>'tags'</td>
-                <td>Food.com tags for recipe</td>
-            </tr>
-            <tr>
-                <td>'nutrition'</td>
-                <td>Nutrition information in the form [calories (#), total fat (PDV), sugar (PDV), sodium (PDV), protein (PDV), saturated fat (PDV), carbohydrates (PDV)]; PDV stands for “percentage of daily value”</td>
-            </tr>
-            <tr>
-                <td>'n_steps'</td>
-                <td>Number of steps in recipe</td>
-            </tr>
-            <tr>
-                <td>'steps'</td>
-                <td>Text for recipe steps, in order</td>
-            </tr>
-            <tr>
-                <td>'description'</td>
-                <td>User-provided description</td>
-            </tr>
-            <tr>
-                <td>'n_ingredients'</td>
-                <td>Number of ingredients in recipe</td>
-            </tr>
-            <tr>
-                <td>'ingredients'</td>
-                <td>Text for all ingredients</td>
-            </tr>
-        </tbody>
-    </table>
+        <h3>RAW_recipes.csv Data Description</h3>
+      <table>
+          <thead>
+              <tr>
+                  <th>Column</th>
+                  <th>Description</th>
+              </tr>
+          </thead>
+          <tbody>
+              <tr>
+                  <td>'name'</td>
+                  <td>Recipe name</td>
+              </tr>
+              <tr>
+                  <td>'id'</td>
+                  <td>Recipe ID</td>
+              </tr>
+              <tr>
+                  <td>'minutes'</td>
+                  <td>Minutes to prepare recipe</td>
+              </tr>
+              <tr>
+                  <td>'contributor_id'</td>
+                  <td>User ID who submitted this recipe</td>
+              </tr>
+              <tr>
+                  <td>'submitted'</td>
+                  <td>Date recipe was submitted</td>
+              </tr>
+              <tr>
+                  <td>'tags'</td>
+                  <td>Food.com tags for recipe</td>
+              </tr>
+              <tr>
+                  <td>'nutrition'</td>
+                  <td>Nutrition information in the form [calories (#), total fat (PDV), sugar (PDV), sodium (PDV), protein (PDV), saturated fat (PDV), carbohydrates (PDV)]; PDV stands for “percentage of daily value”</td>
+              </tr>
+              <tr>
+                  <td>'n_steps'</td>
+                  <td>Number of steps in recipe</td>
+              </tr>
+              <tr>
+                  <td>'steps'</td>
+                  <td>Text for recipe steps, in order</td>
+              </tr>
+              <tr>
+                  <td>'description'</td>
+                  <td>User-provided description</td>
+              </tr>
+              <tr>
+                  <td>'n_ingredients'</td>
+                  <td>Number of ingredients in recipe</td>
+              </tr>
+              <tr>
+                  <td>'ingredients'</td>
+                  <td>Text for all ingredients</td>
+              </tr>
+          </tbody>
+      </table>
+      
+      <h3>RAW_interactions.csv Data Description</h3>
+      <table>
+          <thead>
+              <tr>
+                  <th>Column</th>
+                  <th>Description</th>
+              </tr>
+          </thead>
+          <tbody>
+              <tr>
+                  <td>'user_id'</td>
+                  <td>User ID</td>
+              </tr>
+              <tr>
+                  <td>'recipe_id'</td>
+                  <td>Recipe ID</td>
+              </tr>
+              <tr>
+                  <td>'date'</td>
+                  <td>Date of interaction</td>
+              </tr>
+              <tr>
+                  <td>'rating'</td>
+                  <td>Rating given</td>
+              </tr>
+              <tr>
+                  <td>'review'</td>
+                  <td>Review text</td>
+              </tr>
+          </tbody>
+      </table>
+      
+      <p>For the one central question, my choice is <b>is there a trend of the ratings with respect to the date of the reviews</b>, because it is a factor unrelated to the quality of recipes themselves but a potential <i>confounding variable</i> that may reduce the overall reliability of the ratings.</p>
 
         <!-- Image and Caption Example -->
         <section>
