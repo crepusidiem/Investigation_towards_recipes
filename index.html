@@ -403,7 +403,7 @@
             <h2>Framing a Prediction Problem</h2>
             <p>We are interested in that given all information about a certain recipe, we wanna know how will users rate the given recipe (since we do not know information about each reviewer, this is equivalent to knowing how reviewers would rate the recipe generally), such that the prediction problem would take all information about the recipe. Therefore, except for the column for recipe id and contributor id (which we know is unrelated to the ratings of a recipe), we are gonna use all the other features in the recipe dataframe to predict the average rating of recipes.</p>
             
-			<p>By this setting, I will build a regression model with the metrics of Rooted Mean Squared Error (RMSE) as well as R Squared</p>
+			<p>By this setting, I will build a regression model with the metrics of Rooted Mean Squared Error (RMSE) as well as R Squared, since the former measures how the predicted values are away from the observed values generally, and the latter indicates the percentage of variance explained by the regression model.</p>
         </section>
         
         <section>
