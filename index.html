@@ -434,23 +434,19 @@
             <p>The hyperparameters that ended up performing the best is &alpha; = 0.4, and this is achieved by running thorough <code>GridSearch</code> two times, with the first time exponentially and the second time arithmetically. This model indeed improves the performance by identifying drop in <code>RMSE</code> as well as the significant increase in R Squared, where the former is now 0.43360 and the latter being 0.18791</p>
         </section>
 
-        <!-- Conclusion Section -->
         <section>
-            <h2>Conclusion</h2>
-            <p>Summarize the outcomes of the project, lessons learned, and possible future improvements. End with a strong conclusion that highlights the impact of your work.</p>
+            <h2>Fairness Analysis</h2>
+            <p>I choose recipes with number of ingredients less than 12 to be one group, and all the others to be in another group. With the null hypoethesis that the model's performance does not differ significantly between groups and the alternative hypothesis that the model's performance differs between groups, I performed a permutation test with test statistics being the absolute difference in <code>RMSE</code>. This permutation test runs for 2000 trials, and under the significance level of 0.05, the resulting p value is 0.2420, which means we fail to reject the null hypothesis and there is no strong evidence implying that model's performance differ significantly between groups.</p>
         </section>
 
-        <!-- Call-to-Action Section -->
         <section>
-            <h2>Get Involved</h2>
-            <p>If you're interested in learning more or contributing to this project, click the link below:</p>
-            <a href="#" class="button">Learn More</a>
+            <a href="https://crepusidiem.github.io/Investigation_towards_recipes/" class="button">Go Top</a>
         </section>
     </div>
 
     <!-- Footer -->
     <footer>
-        <p>© 2024 Your Name. All Rights Reserved.</p>
+        <p>© Wenyao Yu.</p>
     </footer>
 </body>
 
