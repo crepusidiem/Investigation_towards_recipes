@@ -424,6 +424,14 @@
               height="600"
               frameborder="0"
             ></iframe>
+            <p>However, after adding regularization through Ridge regression, this is very much ameliorated (as shown below):</p>
+            <iframe
+              src="assets/ridge.html"
+              width="800"
+              height="600"
+              frameborder="0"
+            ></iframe>
+            <p>The hyperparameters that ended up performing the best is &alpha; = 0.4, and this is achieved by running thorough <code>GridSearch</code> two times, with the first time exponentially and the second time arithmetically. This model indeed improves the performance by identifying drop in <code>RMSE</code> as well as the significant increase in R Squared, where the former is now 0.43360 and the latter being 0.18791</p>
         </section>
 
         <!-- Conclusion Section -->
