@@ -386,6 +386,18 @@
             ></iframe>
             <p> Even by simply looking at the visualizations, we can tell that the distribution of each feature differs significantly with respect to whether the column <code>rating</code> is missing, confirming that the column <code> rating </code> is indeed MAR.</p>
         </section>
+        
+        <section>
+        <h2>Hypothesis Testing</h2>
+          <p>Again, based on the question of interest, we have the following hypothesis:</p>
+          <ul>
+              <li><span class="formula">H<sub>0</sub></span>: The ratings do not change significantly between 2008 and 2017 (Earliest year and the latest year). Any observed differences in average ratings are due to random variation.</li>
+              <li><span class="formula">H<sub>1</sub></span>: The ratings do change significantly between 2008 and 2017 (Earliest year and the latest year) due to reasons outside of randomness.</li>
+          </ul>
+          <p>Since we are trying to see changes of rating generally rather than comparing distributions or possibilities, we use absolute mean difference as our test statistic.</p>
+          
+          <p>With the significance level of 0.01, we rejected the null hypothesis based on our <b> p_value of 0</b> after 10000 trials of permutation tests.
+        </section>
 
         <!-- Images and Captions Section -->
         <section>
