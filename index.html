@@ -221,7 +221,7 @@
         <section>
             <h2>Data Cleaning and Exploratory Data Analysis(EDA)</h2>
             <h3>Data Cleaning</h3>
-            	<p>In the procedure of data cleaning, I firstly examine the data types of each feature, transforming each string-encoded feature into the original datatypes. For example, the column <i>ingredients</i> encodes lists of strings by single strings, where I employ <code>literal_eval</code> from the package <code>ast</code> for transformation. Thereafter, I remove data with any outliers in any numeric columns to improve generalization, which can also be examplified through the boxplot below in the section of <b>Univariate Analysis</b>. The head of the cleaned dataset is shown as below:</p>
+            	<p>In the procedure of data cleaning, I firstly examine the data types of each feature, transforming each string-encoded feature into the original datatypes. For example, the column <i>ingredients</i> encodes lists of strings by single strings, where I employ <code>literal_eval</code> from the package <code>ast</code> for transformation. This also happens to <code>submitted</code> where I transform the string-encoded data into timestamp object in pandas. Thereafter, I remove data with any outliers in any numeric columns to improve generalization, which can also be examplified through the boxplot below in the section of <b>Univariate Analysis</b>. The head of the cleaned dataset is shown as below:</p>
 
 
         	<h3>Recipe Table</h3>
@@ -310,7 +310,7 @@
         </table>
     </div>
             
-            <p>Use this section to provide a high-level description of your project, including the main components and what it achieves. Add relevant diagrams or illustrations.</p>
+           
           <h3>Univariate Analysis</h3>
           	<iframe
               src="assets/improved_cooking_time_boxplot.html"
@@ -411,6 +411,19 @@
             <p>The baseline model uses all three numeric features from all the features available, which are <code>minutes, n_steps, n_ingredients</code>. That means in total, this model uses 3 qualquantitative features from the dataset. Since this regression is a linear regression, there is no need to perform standardization, and all the three columns underwent removal of outliers as well as missing value imputations.</p>
             <p>The model gives us a RMSE: 0.48097, r^2: 0.00071, and I therefore believe that my model is not good since it almost fail to explain the variance in the original dataset</p>
             
+        </section>
+        
+        <section>
+            <h2>Final Model</h2>
+            <p>For this final model, I add several features. First of all, I add the column submitted. Since submitted itself as timestamp is not able to help in the way of training models, I create several bins with timespan of <b>1 year</b> so that the new column <code>submitted_bin</code> is now ordinal. Moreover, I transform each entry in <code>tags</code> and <code>ingredients</code> into a single string. Since the order of ingredients or tags does not matter, the bag-of-words assumption perfectly hold for them so that I use <code>TfidfVectorizer</code> to utilize those text features. For the text column description, although using pretrained model from huggingfacehub to perform sentiment analysis may be out of the scope of this class, I found out that by including such feature with <code>TfidfVectorizer</code> does help the model performance.</p>
+            <p>After enumerating all the new features included along with the transformations, it's time to illustrate why the inclusion of these are good. Besides the empirical improvement in model performance through <code>RMSE</code>, since the previous EDA has shown us that the ratings indeed show a decreasing trend with respect to time, inclusion of <code>submitted_bin</code> allows the model to capture this information. For the two text feature that perfectly follows the assumption of the bag-of-words, since some specific tag or ingredient may be favored than the others, the inclusion also allows the model to capture the potential information. This also works for <code>description</code>, as certain phrases in the description may be favored than the others.</p>
+            <p>The model that I ended up choosing is <code>Ridge Regression</code> as it adds regularization on the cost function. I choose this model because I found out that by simply training on the new training data by linear regression, there appeared many predictions in the residual plot that goes beyond the maximum 5 (as shown below):</p>
+            <iframe
+              src="assets/linear.html"
+              width="800"
+              height="600"
+              frameborder="0"
+            ></iframe>
         </section>
 
         <!-- Conclusion Section -->
