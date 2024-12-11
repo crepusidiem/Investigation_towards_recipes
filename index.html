@@ -218,14 +218,13 @@
       
       <p>For the one central question, my choice is <b>is there a trend of the ratings with respect to the date of the reviews</b>, because it is a factor unrelated to the quality of recipes themselves but a potential <i>confounding variable</i> that may reduce the overall reliability of the ratings.</p>
 
-        <!-- Image and Caption Example -->
         <section>
             <h2>Data Cleaning and Exploratory Data Analysis(EDA)</h2>
             <h3>Data Cleaning</h3>
             	<p>In the procedure of data cleaning, I firstly examine the data types of each feature, transforming each string-encoded feature into the original datatypes. For example, the column <i>ingredients</i> encodes lists of strings by single strings, where I employ <code>literal_eval</code> from the package <code>ast</code> for transformation. Thereafter, I remove data with any outliers in any numeric columns to improve generalization, which can also be examplified through the boxplot below in the section of <b>Univariate Analysis</b>. The head of the cleaned dataset is shown as below:</p>
 
 
-        	<h1>Recipe Table</h1>
+        	<h3>Recipe Table</h3>
     <div class="table-container">
         <table>
             <thead>
@@ -320,6 +319,15 @@
               frameborder="0"
             ></iframe>
             <p>As mentioned above, the figure above is a boxplot of the numeric column cooking_time. We see that although the spread of cooking time is generally mild, it does have an elongated tail with outliers present, that's why removing outliers is important during the procedure.</p>
+            
+        <h3>Bivariate Analysis</h3>
+            <p>Due to the choice of our question of interest, the visualization below shows the trend of average rating per year with respect to the different years so that there may be an interesting trend.</p>
+            <iframe
+              src="assets/trend_avg_rating.html"
+              width="800"
+              height="600"
+              frameborder="0"
+            ></iframe>
         </section>
 
         <!-- Features Section -->
