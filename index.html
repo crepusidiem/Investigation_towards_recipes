@@ -196,7 +196,9 @@
 
         <!-- Image and Caption Example -->
         <section>
-            <h2>Project Overview</h2>
+            <h2>Data Cleaning and Exploratory Data Analysis(EDA)</h2>
+            <h3>Data Cleaning</h3>
+            	<p>In the procedure of data cleaning, I firstly examine the data types of each feature, transforming each string-encoded feature into the original datatypes. For example, the column <i>ingredients</i> encodes lists of strings by single strings, where I employ <code>literal_eval</code> from the package <code>ast</code> for transformation. Thereafter, I remove data with any outliers in any numeric columns to improve generalization, which can also be examplified through the boxplot below in the section of <b>Univariate Analysis</b>. The head of the cleaned dataset is shown as below:</p>
 
             <iframe
               src="assets/cooking_time_boxplot.html"
