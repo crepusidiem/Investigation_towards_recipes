@@ -200,17 +200,19 @@
             <h3>Data Cleaning</h3>
             	<p>In the procedure of data cleaning, I firstly examine the data types of each feature, transforming each string-encoded feature into the original datatypes. For example, the column <i>ingredients</i> encodes lists of strings by single strings, where I employ <code>literal_eval</code> from the package <code>ast</code> for transformation. Thereafter, I remove data with any outliers in any numeric columns to improve generalization, which can also be examplified through the boxplot below in the section of <b>Univariate Analysis</b>. The head of the cleaned dataset is shown as below:</p>
 
-            <iframe
-              src="assets/cooking_time_boxplot.html"
-              width="800"
-              height="600"
-              frameborder="0"
-            ></iframe>
 
             
             <div class="image-placeholder">[Image Placeholder]</div>
             <div class="caption">Figure 1: Placeholder for project image or diagram.</div>
             <p>Use this section to provide a high-level description of your project, including the main components and what it achieves. Add relevant diagrams or illustrations.</p>
+          <h3>Univariate Analysis</h3>
+          	<iframe
+              src="assets/cooking_time_boxplot.html"
+              width="800"
+              height="600"
+              frameborder="0"
+            ></iframe>
+            <p>As mentioned above, the figure above is a boxplot of the numeric column cooking_time. We see that although the spread of cooking time is generally mild, it does have an elongated tail with outliers present, that's why removing outliers is important during the procedure.</p>
         </section>
 
         <!-- Features Section -->
