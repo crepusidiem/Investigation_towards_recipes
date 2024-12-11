@@ -396,15 +396,21 @@
           </ul>
           <p>Since we are trying to see changes of rating generally rather than comparing distributions or possibilities, we use absolute mean difference as our test statistic.</p>
           
-          <p>With the significance level of 0.01, we rejected the null hypothesis based on our <b> p_value of 0</b> after 10000 trials of permutation tests.
+          <p>With the significance level of 0.01, we rejected the null hypothesis based on our <b> p_value of 0</b> after 10000 trials of permutation tests. There is strong evidence suggesting that the ratings do change significantly between 2008 and 2017.
         </section>
 
-        <!-- Images and Captions Section -->
         <section>
-            <h2>Implementation</h2>
-            <div class="image-placeholder">[Code Screenshot Placeholder]</div>
-            <div class="caption">Figure 2: Example of implementation or code output.</div>
-            <p>Describe how you implemented the project. Share important code snippets, tools, or frameworks used to bring it to life.</p>
+            <h2>Framing a Prediction Problem</h2>
+            <p>We are interested in that given all information about a certain recipe, we wanna know how will users rate the given recipe (since we do not know information about each reviewer, this is equivalent to knowing how reviewers would rate the recipe generally), such that the prediction problem would take all information about the recipe. Therefore, except for the column for recipe id and contributor id (which we know is unrelated to the ratings of a recipe), we are gonna use all the other features in the recipe dataframe to predict the average rating of recipes.</p>
+            
+			<p>By this setting, I will build a regression model with the metrics of Rooted Mean Squared Error (RMSE) as well as R Squared</p>
+        </section>
+        
+        <section>
+            <h2>Framing a Prediction Problem</h2>
+            <p>We are interested in that given all information about a certain recipe, we wanna know how will users rate the given recipe (since we do not know information about each reviewer, this is equivalent to knowing how reviewers would rate the recipe generally), such that the prediction problem would take all information about the recipe. Therefore, except for the column for recipe id and contributor id (which we know is unrelated to the ratings of a recipe), we are gonna use all the other features in the recipe dataframe to predict the average rating of recipes.</p>
+            
+			<p>By this setting, I will build a regression model with the metrics of Rooted Mean Squared Error (RMSE) as well as R Squared</p>
         </section>
 
         <!-- Conclusion Section -->
