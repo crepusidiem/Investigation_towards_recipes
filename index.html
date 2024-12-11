@@ -321,13 +321,46 @@
             <p>As mentioned above, the figure above is a boxplot of the numeric column cooking_time. We see that although the spread of cooking time is generally mild, it does have an elongated tail with outliers present, that's why removing outliers is important during the procedure.</p>
             
         <h3>Bivariate Analysis</h3>
-            <p>Due to the choice of our question of interest, the visualization below shows the trend of average rating per year with respect to the different years so that there may be an interesting trend.</p>
+            <p>As we are interested in whether the average rating of each contributor is related to the number of recipes that he or she submits, I made this Bivariate Analysis, which shows a clear trend that there is indeed a positive non-linear relationshio between them.</p>
             <iframe
-              src="assets/trend_avg_rating.html"
+              src="assets/avg_rating_num_recipes.html"
               width="800"
               height="600"
               frameborder="0"
             ></iframe>
+            
+         <h3>Interesting Aggregates</h3>
+         <p>Due to the choice of our question of interest, the table below shows the trend of average rating per year with respect to the different years so that there may be an interesting trend. As we can see, the trend does tell us that ratings made in later years are generally lower than those in ealier years.</p>
+         <table>
+          <thead>
+            <tr>
+              <th>year</th>
+              <th>rating</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>2008</td>
+              <td>4.65596</td>
+            </tr>
+            <tr>
+              <td>2009</td>
+              <td>4.70424</td>
+            </tr>
+            <tr>
+              <td>2010</td>
+              <td>4.72534</td>
+            </tr>
+            <tr>
+              <td>2011</td>
+              <td>4.72195</td>
+            </tr>
+            <tr>
+              <td>2012</td>
+              <td>4.74149</td>
+            </tr>
+          </tbody>
+        </table>
         </section>
 
         <!-- Features Section -->
