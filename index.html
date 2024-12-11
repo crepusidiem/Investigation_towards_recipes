@@ -407,10 +407,10 @@
         </section>
         
         <section>
-            <h2>Framing a Prediction Problem</h2>
-            <p>We are interested in that given all information about a certain recipe, we wanna know how will users rate the given recipe (since we do not know information about each reviewer, this is equivalent to knowing how reviewers would rate the recipe generally), such that the prediction problem would take all information about the recipe. Therefore, except for the column for recipe id and contributor id (which we know is unrelated to the ratings of a recipe), we are gonna use all the other features in the recipe dataframe to predict the average rating of recipes.</p>
+            <h2>Baseline Model</h2>
+            <p>The baseline model uses all three numeric features from all the features available, which are <code>minutes, n_steps, n_ingredients</code>. That means in total, this model uses 3 qualquantitative features from the dataset. Since this regression is a linear regression, there is no need to perform standardization, and all the three columns underwent removal of outliers as well as missing value imputations.</p>
+            <p>The model gives us a RMSE: 0.48097, r^2: 0.00071, and I therefore believe that my model is not good since it almost fail to explain the variance in the original dataset</p>
             
-			<p>By this setting, I will build a regression model with the metrics of Rooted Mean Squared Error (RMSE) as well as R Squared</p>
         </section>
 
         <!-- Conclusion Section -->
